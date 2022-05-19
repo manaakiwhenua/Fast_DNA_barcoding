@@ -1,10 +1,10 @@
-# Fast-tracking bespoke DNA reference database generation from museum collections for biomonitoring and conservation
+## Fast-tracking bespoke DNA reference database generation from museum collections for biomonitoring and conservation
 
 Processes used to obtain full-length DNA barcodes from raw Illumina MiSeq data, using [Illumina bcl2fastq](https://support.illumina.com/sequencing/sequencing_software/bcl2fastq-conversion-software.html), [Claident](https://github.com/astanabe/Claident/), [VSEARCH](https://github.com/torognes/vsearch), and [EMBOSS](http://emboss.sourceforge.net/). 
 
 To generate the MiSeq data, two overlapping fragments (FC and BR) of the mitochodrial COI gene were amplified by PCR from each of 450 invertebrate specimens, using the primer pairs Ill_LCO1490 with Ill_FC-R, and Ill_BR-F with Ill_HCO2198, based on [Shokralla et al. 2015, Massively parallel multiplex DNA sequencing for specimen identification using an Illumina MiSeq platform. Scientific Reports 5:9687, DOI: 10.1038/srep09687](http://www.nature.com/srep/2015/150408/srep09687/full/srep09687.html). The amplicons were tagged with Illumina Nextera XT forward or reverse adapters and padded with 0-4 mer nucleotide spacers to increase sequence heterogeneity. Unique 8-mer multiplex tags were added to the amplicons from each specimen in a second PCR step.  
 
-## Data processing steps
+### Data processing steps
 
 1. Raw MiSeq data in bcl format was converted into fastq format, without demultiplexing, using `bcl2fastq`. 
 
